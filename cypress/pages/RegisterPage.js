@@ -32,8 +32,6 @@ export class RegisterPage {
     }
 
 
-    //Aqui é muito repetição de várias linhas
-
     formValidation() {
         cy.get(SELECTORS.LOGIN).click()
         cy.get(SELECTORS.REGISTER).click()

@@ -11,26 +11,25 @@ describe('Login', () => {
   const loginPage = new LoginPage();
 
 
-  it('TC-001: Go to Notion', () => {
+  it('Visit first page', () => {
 
     loginPage.visit();
 
   });
 
 
-  it.only('TC-002: Login form validation', () => {
+  it.only('Login form validation', () => {
 
-    // loginPage.InvalidEmail(password)
-    // //user ou email?????
-    // loginPage.InvalidPassword(user)
-    // loginPage.FormEmpty(user)
+    loginPage.InvalidEmail(password)
+    loginPage.InvalidPassword(user)
+    loginPage.FormEmpty(user)
 
     loginPage.FormatEmail(password)
 
 
   })
 
-  it('TC-003: Log in successfully', () => {
+  it('Log in successfully', () => {
 
     loginPage.login(user, password);
 

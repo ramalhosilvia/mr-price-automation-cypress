@@ -22,7 +22,6 @@ export class MyAccountPage {
 
     }
 
-    //onde o visit e login devem ficar para serem reutilizados?
 
     visit() {
         cy.visit('/', {

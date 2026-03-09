@@ -10,7 +10,7 @@ describe('My account', () => {
     const myAccountPage = new MyAccountPage();
 
 
-    it('TC-001: ', () => {
+    it('Add new address', () => {
         myAccountPage.visit();
         myAccountPage.login(user, password);
         myAccountPage.validatePage();
