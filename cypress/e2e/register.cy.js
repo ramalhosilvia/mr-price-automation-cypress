@@ -1,30 +1,15 @@
-
 import { Register, RegisterPage } from "../pages/RegisterPage";
 
-
-describe('REgister', () => {
+describe('Register', () => {
     const register = new RegisterPage();
 
-
-    it('TC-001: ', () => {
-
-        register.visit();
-        register.form();
-
-    });
-
-    it.only('TC-002: ', () => {
-
+    it('Form validation ', () => {
         register.visit();
         register.formValidation();
         register.firstNameValidation();
         register.lastNameValidation();
         register.emailValidation();
         register.passwordValidation();
-
     });
-
-
-
 
 });
