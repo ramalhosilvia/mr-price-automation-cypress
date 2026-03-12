@@ -1,15 +1,13 @@
 
 import { LoginPage } from "../pages/LoginPage";
-import users from '../fixtures/users.json';
 
 
-const user = users[0].email;
-const password = users[0].password;
+const user = Cypress.env('MRPRICE_USER_EMAIL');
+const password = Cypress.env('MRPRICE_USER_PASSWORD');
 
 
 describe('Login', () => {
   const loginPage = new LoginPage();
-
 
   it('Visit first page', () => {
 
@@ -18,14 +16,12 @@ describe('Login', () => {
   });
 
 
-  it.only('Login form validation', () => {
+  it('Login form validation', () => {
 
-    loginPage.InvalidEmail(password)
-    loginPage.InvalidPassword(user)
-    loginPage.FormEmpty(user)
-
-    loginPage.FormatEmail(password)
-
+    loginPage.validateUnregisteredEmail(password)
+    loginPage.invalidPassword(user)
+    loginPage.formEmpty(user)
+    loginPage.formatEmail(password)
 
   })
 
@@ -35,7 +31,11 @@ describe('Login', () => {
 
   });
 
+  it('Forgot password', () => {
 
+    loginPage.forgotPassword();
+
+  });
 
 });
 

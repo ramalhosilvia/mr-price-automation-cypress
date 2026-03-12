@@ -17,6 +17,5 @@
 import './commands'
 
 Cypress.on('uncaught:exception', (err, runnable) => {
-  // Retornar false faz Cypress ignorar o erro
   return false;
 });
